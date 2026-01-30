@@ -14,15 +14,15 @@ These commands encode **my workflow preferences** so I don't have to repeat myse
 
 | Command | What it does |
 |---------|-------------|
-| `/jira` | Work on a Jira issue with my preferred workflow (status transitions, git behavior, guardrails) |
-| `/create` | Create a Jira issue with my defaults |
-| `/refine` | Turn rough thoughts into clean, parked items ready to review later |
-| `/marathon` | Long-running autonomous work - front-load context, then work unattended |
-| `/qa` | Lightweight QA pass - run happy path, catch obvious issues |
-| `/todo` | Create a Todoist task via Zapier webhook |
-| `/learn` | Capture learnings into the knowledge base |
-| `/park` | End of session checklist - capture loose ends |
-| `/basecamp` | Load context for Basecamp API work |
+| `/create` | How I want Jira items created |
+| `/refine` | How I want Jira items refined |
+| `/jira` | How I want Jira items actioned |
+| `/marathon` | Prepare long-running autonomous work |
+| `/qa` | Lightweight QA safety net |
+| `/todo` | How to add to my Todoist |
+| `/basecamp` | How to read/write my Basecamp |
+| `/learn` | Capture learnings from this session into the kb |
+| `/park` | End of session checklist |
 
 ## Installation
 
