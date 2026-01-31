@@ -35,6 +35,28 @@ Before making API calls, verify the files exist in the current repo or navigate 
 - Credentials are gitignored and never committed
 - PUT requests replace all fields (PATCH behavior varies)
 
+## Known Issue: Em Dash in Curl Commands
+
+When running curl commands directly in Bash, double hyphens (`--`) can get converted to em dashes (—), causing errors like:
+```
+curl: option : blank argument where content is expected
+```
+
+**Workaround:** Write curl commands to a temp script file, then execute the script:
+
+```bash
+cat > /tmp/bc_request.sh << 'SCRIPT'
+#!/bin/bash
+ACCESS_TOKEN='your_token_here'
+curl -s "https://3.basecampapi.com/..." \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "Content-Type: application/json"
+SCRIPT
+chmod +x /tmp/bc_request.sh && /tmp/bc_request.sh
+```
+
+This avoids character encoding issues in the shell. See KAN-76 for tracking.
+
 ## Common Operations
 
 Refer to the integration plan for:
