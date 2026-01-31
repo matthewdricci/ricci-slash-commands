@@ -4,9 +4,9 @@ My personal Claude Code slash commands. Built for how I actually work - as a PM 
 
 ## Philosophy
 
-These commands encode **my workflow preferences** so I don't have to repeat myself. They're opinionated. That's the point.
+These commands encode **my workflow preferences** so I don't have to repeat myself. They're opinionated, to my style. Relying heavily on GTD practices.
 
-**The goal:** When I type `/jira KAN-123`, Claude knows to set the issue to "In Progress", do the work, leave breadcrumbs, and hand it back for my review. No explaining the workflow every time.
+**The goal:** When I type `/jira KAN-123`, Claude knows to set the issue to "In Progress", do the work, leave breadcrumbs, and then put it in QA and assign it to me. No explaining the workflow every time. Or to stop having to remind Claude Code that my Basecamp API details are in the repo, and that you have to write the title and description every time for edits (else it clears the other value)
 
 **The style:** Wes Kao, not PRD. These are notes to a co-worker, not formal documentation. Short paragraphs. Direct sentences. Bold the key point.
 
@@ -47,9 +47,9 @@ These are templates, not gospel. Fork and make them yours:
 - **Names** - I reference "Matt Ricci" in some commands. Swap in your name.
 - **Guardrails** - I have strong opinions about never pushing unattended. Adjust to your risk tolerance.
 
-## What Makes These Different
+## Considerations
 
-Most Claude Code prompts are generic. These are **workflow-specific**:
+My workflow specific things:
 
 1. **Status transitions baked in** - `/jira` knows my Jira workflow (Triage → In Progress → QA → Done)
 2. **Git guardrails** - Commit liberally, never push. That's my safety barrier.
