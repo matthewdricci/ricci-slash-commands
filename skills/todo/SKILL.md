@@ -9,7 +9,7 @@ Shorthand for creating Todoist tasks via Zapier webhook.
 
 ## Quick Reference
 
-**Endpoint:** `{{YOUR_ZAPIER_WEBHOOK_URL}}`
+**Endpoint:** `$TODOIST_WEBHOOK_URL`
 
 **Schema:**
 ```json
@@ -33,7 +33,7 @@ Shorthand for creating Todoist tasks via Zapier webhook.
 ## Example: Simple Task
 
 ```bash
-curl -X POST "{{YOUR_ZAPIER_WEBHOOK_URL}}" \
+curl -X POST "$TODOIST_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
   -d '{
     "task": "Call the plumber",
@@ -44,7 +44,7 @@ curl -X POST "{{YOUR_ZAPIER_WEBHOOK_URL}}" \
 ## Example: With Deadline and Priority
 
 ```bash
-curl -X POST "{{YOUR_ZAPIER_WEBHOOK_URL}}" \
+curl -X POST "$TODOIST_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
   -d '{
     "task": "Review quarterly report",
@@ -61,7 +61,7 @@ To use this command, create a Zapier webhook that posts to Todoist:
 1. Create a new Zap with **Webhooks by Zapier** as trigger (Catch Hook)
 2. Add **Todoist** action: Create Task
 3. Map fields: `task` → Task Content, `deadline_date` → Due Date, etc.
-4. Replace `{{YOUR_ZAPIER_WEBHOOK_URL}}` with your webhook URL
+4. Update the endpoint URL in this skill file if using a different webhook
 
 **Design rationale:**
 - Simple so it works every time

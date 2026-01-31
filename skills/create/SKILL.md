@@ -41,9 +41,14 @@ Create a new Jira issue with Matt's preferred defaults and workflow.
 | Table header | `\|\|header\|\|` |
 | Table cell | `\|cell\|` |
 
+**Known issue with Atlassian MCP:**
+- The `#` character for numbered lists gets converted to `h1.` headings by the MCP tool
+- **Workaround:** Use bullet points (`*`) instead of numbered lists (`#`) until this is fixed
+- See KAN-72 for tracking
+
 **Common mistakes to avoid:**
 - Do NOT use `h1.` for numbered list items (it creates a heading)
-- Numbered lists use `#` at the start of each line
+- Avoid `#` for numbered lists due to MCP bug - use `*` bullet points instead
 - Tables use `||` for headers and `|` for cells
 
 ## Output
