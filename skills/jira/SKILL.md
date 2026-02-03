@@ -9,24 +9,37 @@ Work on a Jira issue following Matt's preferred workflow.
 
 ## Workflow
 
-1. **Start**: Set the issue to "In Progress"
-2. **Work**: Do the work (edit files, commit incrementally, call APIs, etc.)
-3. **Complete**: Set to "QA" and assign to Matt Ricci
-4. **Never**: Mark issues as "Done" directly - that's Matt's job after review
+1. **Pre-flight**: Check for uncommitted changes in current directory. If dirty, stop and ask Matt to commit/stash first.
+2. **Worktree**: Set up isolated worktree (see Git Behavior below)
+3. **Start**: Set the issue to "In Progress"
+4. **Work**: Do the work (edit files, commit incrementally, call APIs, etc.)
+5. **Complete**: Set to "QA" and assign to Matt Ricci
+6. **Never**: Mark issues as "Done" directly - that's Matt's job after review
 
 ## Git Behavior
 
-**Commit liberally, never push.**
+**Use worktrees for isolation. Commit liberally, never push.**
 
-- Work directly on `main` branch (unless experimental/risky)
+### Worktree Setup (for concurrent sessions)
+
+Before starting work, set up an isolated worktree:
+
+1. **Check the main repo location** - find the root of the git repo
+2. **Create worktree** at `~/.claude-worktrees/<repo-name>/<issue-key>/`
+   ```bash
+   git worktree add ~/.claude-worktrees/<repo-name>/<issue-key> -b <issue-key>
+   ```
+3. **Work in that directory** for all file edits and commits
+4. If worktree already exists, just `cd` into it
+
+This keeps concurrent Claude Code sessions isolated - each issue gets its own branch and working directory.
+
+### Committing
+
 - Commit incrementally as work progresses (creates clear history, preserves work)
 - **NEVER push** - this is the safety barrier
 - Matt reviews via `git log`, `git diff` before pushing
-
-When to use a branch:
-- Experimental/risky changes Matt wants to easily revert
-- Multi-day work that shouldn't block other tasks
-- Changes Matt wants to review as a proper PR diff
+- When done, Matt merges the branch to main manually
 
 ## Communication
 
