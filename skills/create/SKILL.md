@@ -58,6 +58,5 @@ When creating, confirm:
 2. Description (in wiki markup)
 3. Any suggested links or parent epic
 4. Status will be set to Triage
-5. Matt Ricci will be added as watcher
 
 $ARGUMENTS
