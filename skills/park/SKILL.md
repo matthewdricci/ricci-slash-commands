@@ -26,6 +26,10 @@ When invoked, work through these questions:
    - Does anything need to be committed?
    - Does anything need to be pushed? (Ask Matt - never push unattended)
 
+5. **Changelog?**
+   - Does the changelog need to be updated for https://github.com/matthewdricci/bth-messaging-agent?
+   - (Only applies when working in the bth-messaging-agent repo)
+
 ## Purpose
 
 Provides a clean end-of-session checklist to:
