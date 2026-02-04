@@ -64,7 +64,10 @@ If work requires human action:
 ## Definition of Done
 
 Before marking work complete (moving to QA):
-- Consider if the application's **public changelog** and/or the **private code repo changelog** needs an update. Err on yes.
+- **Changelog** - Does the public changelog and/or repo changelog need an update? Err on yes.
+- **Tests** - If code changed, do tests pass? Did you add coverage for new behavior?
+- **Verified** - Did you manually confirm the change works as expected?
+- **Docs** - If user-facing behavior changed, does any documentation need updating?
 
 ## Guardrails
 
