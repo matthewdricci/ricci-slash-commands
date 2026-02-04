@@ -68,12 +68,24 @@ Jira card titles must start with an action verb. This makes the backlog scannabl
 - Avoid `#` for numbered lists due to MCP bug - use `*` bullet points instead
 - Tables use `||` for headers and `|` for cells
 
+## After Creating: Link to Epic When Relevant
+
+If the user's request mentioned an **epic**, **project**, or **repo** (e.g. bth-messaging, Home Assistant, ricci-slash-commands, ATH_Agent, Strategy), **link the new issue to the appropriate epic**:
+
+1. Call **jira_link_to_epic**(issue_key, epic_key) with the newly created issue key and the correct epic key.
+2. If unsure which epic, list options or ask (e.g. "Link to epic? Options: KAN-238 Home Assistant, KAN-264 Strategy, KAN-18 Personal Productivity").
+3. Err on linking when the context is clear (e.g. "create a card for the good morning weather" → KAN-238).
+
+**Epic reference (KAN):** Home Assistant Voice = KAN-238, Strategy/Research/Positioning = KAN-264, Matt's Personal Productivity = KAN-18, BTH Ops = KAN-224, BTH App Phase 2 = KAN-154, Turno = KAN-246, BTH Status Board = KAN-155. Use jira_search or jira_get_project_issues if you need to find an epic by name.
+
+Tracking: Bug KAN-265 — Create/Jira flow was not linking to epics; this section is the fix.
+
 ## Output
 
 When creating, confirm:
 1. Summary/title
 2. Description (in wiki markup)
-3. Any suggested links or parent epic
+3. Epic link (if applicable — and actually call jira_link_to_epic)
 4. Status will be set to Triage
 
 $ARGUMENTS

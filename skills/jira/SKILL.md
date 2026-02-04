@@ -53,6 +53,7 @@ When creating new issues during work:
 - Add **Matt Ricci** as a watcher
 - Put in status **"Triage"**
 - Use **Jira wiki markup** (not markdown)
+- **Link to epic when relevant** — If the work or user mention implies an epic/repo (e.g. bth-messaging, Home Assistant, ricci-slash-commands, Strategy), call **jira_link_to_epic**(issue_key, epic_key) after create. See create skill for epic reference. Bug tracking: KAN-265.
 
 ## Human Tasks
 
