@@ -20,6 +20,23 @@ Create a new Jira issue with Matt's preferred defaults and workflow.
 - Use **Jira wiki markup** (NOT markdown) for descriptions
 - Validate required fields are populated
 - Double-check before linking or merging content
+- **Titles must be action phrases** starting with a verb
+
+## Title Formatting
+
+Jira card titles must start with an action verb. This makes the backlog scannable and clarifies what "done" means.
+
+**Good titles:**
+- "Create admin view for adoption metrics"
+- "Add early check-in auto-messages"
+- "Fix login redirect bug"
+- "Build Turno webhook handler"
+
+**Bad titles:**
+- "Admin view for adoption metrics"
+- "Early check-in messages"
+- "Login redirect bug"
+- "Turno webhook handler"
 
 ## Jira Wiki Markup Reference
 

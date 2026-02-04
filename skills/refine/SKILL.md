@@ -35,6 +35,18 @@ Write like Wes Kao - communication style for working with a co-worker, not writi
 - Any constraints or context that matters
 - Open questions (things that need answering before action)
 
+## Jira Card Titles
+
+When creating or updating Jira cards, **titles must be action phrases** starting with a verb:
+
+- "Create admin view for adoption metrics" ✓
+- "Add early check-in auto-messages" ✓
+- "Fix login redirect bug" ✓
+- "Admin view for adoption metrics" ✗
+- "Early check-in messages" ✗
+
+This makes the backlog scannable and clarifies what "done" means.
+
 ## What to Avoid
 
 - Prescribing technical implementation details
