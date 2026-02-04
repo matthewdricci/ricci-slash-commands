@@ -61,6 +61,11 @@ If work requires human action:
 - Create a **sub-task assigned to Matt**
 - Don't block on it - continue with other work
 
+## Definition of Done
+
+Before marking work complete (moving to QA):
+- Consider if the application's **public changelog** and/or the **private code repo changelog** needs an update. Err on yes.
+
 ## Guardrails
 
 **NEVER do these unattended:**

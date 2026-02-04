@@ -80,6 +80,11 @@ If the user's request mentioned an **epic**, **project**, or **repo** (e.g. bth-
 
 Tracking: Bug KAN-265 — Create/Jira flow was not linking to epics; this section is the fix.
 
+## Definition of Done (Reminder for Future Work)
+
+When this issue is eventually completed, consider:
+- Does the application's **public changelog** and/or the **private code repo changelog** need an update? Err on yes.
+
 ## Output
 
 When creating, confirm:

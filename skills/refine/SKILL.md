@@ -58,6 +58,11 @@ This makes the backlog scannable and clarifies what "done" means.
 
 When you want to **park an idea cleanly** - not ready to act, but want it tightened so you can sleep on it and return with fresh eyes.
 
+## Definition of Done (Reminder for Future Work)
+
+When the refined idea is eventually implemented, consider:
+- Does the application's **public changelog** and/or the **private code repo changelog** need an update? Err on yes.
+
 ---
 
 **Input to refine:**
