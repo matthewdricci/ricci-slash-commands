@@ -35,6 +35,25 @@ Before making API calls, verify the files exist in the current repo or navigate 
 - Credentials are gitignored and never committed
 - PUT requests replace all fields (PATCH behavior varies)
 
+## Known Issue: Document Updates Reset Title
+
+When updating a Basecamp document via PUT, you **must include both `title` and `content`** in the request body. If you only send `content`, the title will be reset to "Untitled".
+
+**Correct:**
+```json
+{
+  "title": "My Document Title",
+  "content": "<div>Updated content here...</div>"
+}
+```
+
+**Incorrect (will lose title):**
+```json
+{
+  "content": "<div>Updated content here...</div>"
+}
+```
+
 ## Known Issue: Em Dash in Curl Commands
 
 When running curl commands directly in Bash, double hyphens (`--`) can get converted to em dashes (—), causing errors like:
