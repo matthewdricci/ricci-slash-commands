@@ -16,6 +16,14 @@ Work on a Jira issue following Matt's preferred workflow.
 5. **Complete**: Set to "QA" and assign to Matt Ricci
 6. **Never**: Mark issues as "Done" directly - that's Matt's job after review
 
+## Working with Epics
+
+**When provided an Epic key (e.g., KAN-326):**
+- Search for all issues within that epic using JQL: `parent = <epic-key> OR "Epic Link" = <epic-key>`
+- Work on the individual subtasks/stories inside the epic, NOT the epic itself
+- Transition each subtask through the normal workflow (Triage → In Progress → QA)
+- The epic is just a container - the actual work is in the child issues
+
 ## Git Behavior
 
 **Use worktrees for isolation. Commit liberally, never push.**
